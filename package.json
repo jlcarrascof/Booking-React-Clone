@@ -16,5 +16,8 @@
   "bugs": {
     "url": "https://github.com/jlcarrascof/Booking-React-Clone/issues"
   },
-  "homepage": "https://github.com/jlcarrascof/Booking-React-Clone#readme"
+  "homepage": "https://github.com/jlcarrascof/Booking-React-Clone#readme",
+  "dependencies": {
+    "express": "^4.18.2"
+  }
 }
