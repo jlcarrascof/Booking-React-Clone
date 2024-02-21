@@ -1,6 +1,5 @@
 import express from "express";
 import Hotel from "../models/hotel.js";
-import hotel from "../models/hotel.js";
 
 const router = express.Router();
 
@@ -49,7 +48,7 @@ router.delete("/:id", async (req, res) => {
 
 router.get("/:id", async (req, res) => {
     try {
-        const hotel = await hotel.findById(req.params.id);
+        const hotel = await Hotel.findById(req.params.id);
         res.status(200).json(hotel);
     } catch (err) {
         res.status(500).json(err);
@@ -60,7 +59,7 @@ router.get("/:id", async (req, res) => {
 
 router.get("/", async (req, res) => {
     try {
-        const hotel = await hotel.find();
+        const hotel = await Hotel.find();
         res.status(200).json(hotel);
     } catch (err) {
         res.status(500).json(err);
