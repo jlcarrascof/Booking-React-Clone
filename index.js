@@ -27,8 +27,8 @@ app.use("/api/users", usersRoute);
 app.use("/api/hotels", hotelsRoute);
 app.use("/api/rooms", roomsRoute);
 
-mongoose.connection.on("disconnected", () => {
-    console.log("MongoDB disconnected");
+app.use((req, res, next) => {
+    console.log("Hi, I am a middleware");
 });
 
 app.listen(8800, () => {
