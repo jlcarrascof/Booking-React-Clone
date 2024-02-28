@@ -20,11 +20,6 @@ const connect = async () => {
 
 // Middlewares
 
-app.use((req, res, next) => {
-    console.log("Hi middleware");
-    next();
-});
-
 app.use(express.json());
 
 app.use("/api/auth", authRoute);
