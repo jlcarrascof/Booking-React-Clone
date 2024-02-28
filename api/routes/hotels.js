@@ -58,14 +58,11 @@ router.get("/:id", async (req, res) => {
 // GET ALL
 
 router.get("/", async (req, res, next) => {
-
-    console.log("Hi, I am a Hotel route");
-
     try {
-        const hotel = await Hotel.find();
+        const hotel = await Hotel.findById("asdasdas");
         res.status(200).json(hotel);
     } catch (err) {
-        res.status(500).json(err);
+        next(err);
     }
 });
 
