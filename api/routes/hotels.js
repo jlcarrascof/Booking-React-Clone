@@ -60,7 +60,7 @@ router.get("/:id", async (req, res) => {
 router.get("/", async (req, res, next) => {
 
     console.log("Hi, I am a Hotel route");
-    next();
+
     try {
         const hotel = await Hotel.find();
         res.status(200).json(hotel);
