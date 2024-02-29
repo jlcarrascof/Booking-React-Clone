@@ -1,5 +1,6 @@
 import express from "express";
 import Hotel from "../models/hotel.js";
+import { createError } from "../utils/error.js";
 
 const router = express.Router();
 
@@ -60,10 +61,7 @@ router.get("/:id", async (req, res) => {
 router.get("/", async (req, res, next) => {
 
     const failed = true;
-    const err = new Error();
-    err.status = 404;
-    err.message = "Sorry! Not found!!";
-    if (failed) return next(err);
+    if (failed) return next(createError(401, "You are not authonticated!"));
 
     try {
         const hotel = await Hotel.findById("asdasdas");
