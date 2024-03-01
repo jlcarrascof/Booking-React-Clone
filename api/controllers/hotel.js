@@ -18,7 +18,18 @@ export const updateHotel = async (req, res, next) => {
             $set: req.body }, { new: true });
         res.status(200).json(updatedHotel);
     } catch (err) {
-        res.status(500).json(err);
+        next(err);
     }
 
-};    
+};
+
+export const deleteHotel = async (req, res, next) => {
+
+    try {
+        await Hotel.findByIdAndDelete(req.params.id);
+        res.status(200).json("Hotel has been deleted...");
+    } catch (err) {
+        next(err);
+    }
+
+};
