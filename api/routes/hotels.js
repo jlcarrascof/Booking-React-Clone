@@ -1,7 +1,7 @@
 import express from "express";
 import Hotel from "../models/hotel.js";
 import { createError } from "../utils/error.js";
-import { createHotel, deleteHotel, getHotel, updateHotel } from "../controllers/hotel.js";
+import { createHotel, deleteHotel, getHotel, updateHotel, getHotels } from "../controllers/hotel.js";
 
 const router = express.Router();
 
@@ -23,13 +23,6 @@ router.get("/:id", getHotel);
 
 // GET ALL
 
-router.get("/", async (req, res, next) => {
-    try {
-        const hotel = await Hotel.find();
-        res.status(200).json(hotel);
-    } catch (err) {
-        next(err);
-    }
-});
+router.get("/", getHotels);
 
 export default router;
