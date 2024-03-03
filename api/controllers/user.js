@@ -47,11 +47,11 @@ export const getUser = async (req, res, next) => {
 
 };
 
-export const getHotels = async (req, res, next) => {
+export const getUsers = async (req, res, next) => {
 
     try {
-        const hotel = await Hotel.find();
-        res.status(200).json(hotel);
+        const users = await User.find();
+        res.status(200).json(users);
     } catch (err) {
         next(err);
     }
