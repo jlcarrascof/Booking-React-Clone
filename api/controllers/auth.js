@@ -43,6 +43,8 @@ export const login = async (req, res, next) => {
             return next(createError(400, 'Wrong password or username'));
         }
 
+        // Command to generate a token: openssl rand -base64 32
+
         const { password, isAdmin, ...otherDetails } = user._doc; 
 
         res.status(200).json({...otherDetails});
