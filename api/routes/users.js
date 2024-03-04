@@ -1,5 +1,5 @@
 import express from "express";
-import { createUser, deleteUser, getUser, updateUser, getUsers } from "../controllers/user.js";
+import { deleteUser, getUser, updateUser, getUsers } from "../controllers/user.js";
 import { verifyAdmin, verifyToken, verifyUser } from "../utils/verifyToken.js";
 
 const router = express.Router();
@@ -18,7 +18,7 @@ router.get("/checkadmin/:id", verifyAdmin, (req, res, next) => {
 
 // CREATE
 
-router.post("/", createUser);
+// router.post("/", createUser);
 
 // UPDATE
 
