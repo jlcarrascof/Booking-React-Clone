@@ -2,7 +2,13 @@ import '../header/header.css'
 
 const Header = () => {
   return (
-    <div>Header</div>
+    <div className='header'>
+        <div className="headerList">
+            <div className="headerListItem">
+                
+            </div>
+        </div>
+    </div>
   )
 }
 
