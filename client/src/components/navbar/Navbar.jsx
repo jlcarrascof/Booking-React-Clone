@@ -3,7 +3,15 @@ import '../navbar/navbar.css';
 const Navbar = () => {
   return (
     <div className='navbar'>
-        Navbar
+        <div className="navContainer">
+            <span className="logo">
+                Booking
+            </span>
+            <div className="navItems">
+                <button className="navButton">Register</button>
+                <button className="navButton">Login</button>
+            </div>    
+        </div>
     </div>
   )
 }
