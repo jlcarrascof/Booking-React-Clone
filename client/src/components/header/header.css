@@ -4,3 +4,9 @@
     display: flex;
     justify-content: center;
 }
+
+.headerContainer {
+    width: 100%;
+    max-width: 1024px;
+    margin: 20px 0 100px 0;
+}
