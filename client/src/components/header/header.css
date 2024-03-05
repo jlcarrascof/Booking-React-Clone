@@ -16,3 +16,9 @@
     gap: 40px;
 }
 
+.headerListItem {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
