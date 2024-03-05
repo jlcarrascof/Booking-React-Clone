@@ -1,5 +1,6 @@
 import User from "../models/User.js";
 
+/*
 export const createUser = async (req, res, next) => {
 
     const newUser = new User(req.body);
@@ -12,11 +13,12 @@ export const createUser = async (req, res, next) => {
     }
 
 };
+*/
 
 export const updateUser = async (req, res, next) => {
 
     try {
-        const updatedUser = await Hotel.findByIdAndUpdate(req.params.id, 
+        const updatedUser = await User.findByIdAndUpdate(req.params.id, 
             { $set: req.body }, { new: true });
         res.status(200).json(updatedUser);
     } catch (err) {
