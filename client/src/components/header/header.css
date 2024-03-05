@@ -22,3 +22,7 @@
     gap: 10px;
 }
 
+.headerListItem.active {
+    border: 1px solid white;
+    padding: 10px;
+}
