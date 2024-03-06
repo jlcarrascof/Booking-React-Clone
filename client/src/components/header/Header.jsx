@@ -1,6 +1,6 @@
 import '../header/header.css'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faBed, faPlane, faCar, faTaxi } from '@fortawesome/free-solid-svg-icons'
+import { faBed, faPlane, faCar, faTaxi, faCalendarDays, faPerson } from '@fortawesome/free-solid-svg-icons'
 
 const Header = () => {
   return (
@@ -39,6 +39,14 @@ const Header = () => {
               placeholder='Where are you going?' 
               className='headerSearchInput' 
             />
+          </div>
+          <div className="headerSearchInput">
+            <FontAwesomeIcon icon={faCalendarDays} className='headerIcon' />
+            <span className='headerSearchText'>Date to date</span>
+          </div>
+          <div className="headerSearchInput">
+            <FontAwesomeIcon icon={faPerson} className='headerIcon' />
+            <span className='headerSearchText'>2 adults 2 children 1 room</span>
           </div>
         </div>
       </div>
