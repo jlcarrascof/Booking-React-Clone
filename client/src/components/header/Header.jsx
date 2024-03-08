@@ -1,8 +1,19 @@
 import '../header/header.css'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faBed, faPlane, faCar, faTaxi, faCalendarDays, faPerson } from '@fortawesome/free-solid-svg-icons'
+import { DateRange } from 'react-date-range';
+import {useState} from 'react'
 
 const Header = () => {
+
+  const [date, setDate] = useState([
+    {
+      startDate: new Date(),
+      endDate: null,
+      key: 'selection'
+    }
+  ]);
+
   return (
     <div className='header'>
       <div className="headerContainer">
@@ -43,6 +54,12 @@ const Header = () => {
           <div className="headerSearchItem">
             <FontAwesomeIcon icon={faCalendarDays} className='headerIcon' />
             <span className='headerSearchText'>Date to date</span>
+            <DateRange
+                editableDateInputs={true}
+                onChange={item => setDate([item.selection])}
+                moveRangeOnFirstSelection={false}
+                ranges={date}
+            />
           </div>
           <div className="headerSearchItem">
             <FontAwesomeIcon icon={faPerson} className='headerIcon' />
