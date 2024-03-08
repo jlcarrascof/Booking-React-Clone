@@ -2,7 +2,9 @@ import '../header/header.css'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faBed, faPlane, faCar, faTaxi, faCalendarDays, faPerson } from '@fortawesome/free-solid-svg-icons'
 import { DateRange } from 'react-date-range';
-import {useState} from 'react'
+import {useState} from 'react';
+import 'react-date-range/dist/styles.css'; // main style file
+import 'react-date-range/dist/theme/default.css'; // theme css file
 
 const Header = () => {
 
