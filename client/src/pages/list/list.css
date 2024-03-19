@@ -68,6 +68,16 @@
     width: 50px;
 }
 
+.listSearch>button {
+    padding: 10px;
+    background-color: #0071c2;
+    color: white;
+    border: none;
+    width: 100%;
+    font-weight: 500;
+    cursor: pointer;
+}
+
 .listResult {
     flex: 3;
 }

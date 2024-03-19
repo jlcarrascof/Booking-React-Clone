@@ -74,7 +74,8 @@ const List = () => {
                   <input type="number" min={1} className="lsOptionInput" placeholder={options.rooms} />
                 </div>
               </div>
-            </div>  
+            </div>
+            <button>Search</button>  
           </div>
           <div className="listResult">
           </div>
