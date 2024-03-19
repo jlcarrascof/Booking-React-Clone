@@ -1,2 +1,2 @@
 # Booking-React-Clone
-Reservation system using the MEAN stack.
+Reservation system using the MERN stack.
