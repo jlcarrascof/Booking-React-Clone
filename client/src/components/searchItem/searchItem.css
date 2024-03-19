@@ -24,6 +24,7 @@
 .siTitle {
     font-size: 20px;
     color: #0071c2;
+    margin-top: 5px;
 }
 
 .siDistance {
@@ -46,6 +47,17 @@
 
 .siFeatures {
     font-size: 12px;
+}
+
+.siCancelOp {
+    font-size: 12px;
+    background-color: #008009;
+    font-weight: bold;
+}
+
+.siCancelOpSubtitle {
+    font-size: 12px;
+    background-color: #008009;
 }
 
 .siDetails {
