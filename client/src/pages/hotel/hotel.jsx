@@ -54,7 +54,7 @@ const Hotel = () => {
           </div>
           <div className="hotelDetails">
             <div className="hotelDetailsTexts">
-              <h1 className="hotelTitle">Stay in the heart of Krakow</h1>
+              <h1 className="hotelTitle">Stay in the heart of City</h1>
               <p className="hotelDesc">
                 Located a 5-minute walk from St. Florian's Gate in Krakow, Tower
                 Street Apartments has accommodations with air conditioning and
@@ -69,8 +69,7 @@ const Hotel = () => {
                 airport shuttle service.
               </p>
             </div>
-          </div>
-          <div className="hotelDetailsPrice">
+            <div className="hotelDetailsPrice">
               <h1>Perfect for a 9-night stay!</h1>
               <span>
                 Located in the real heart of Krakow, this property has an
@@ -80,6 +79,7 @@ const Hotel = () => {
                 <b>$945</b> (9 nights)
               </h2>
               <button>Reserve or Book Now!</button>
+            </div>  
           </div>
         </div>          
       </div>
