@@ -50,7 +50,11 @@ const Header = ({type}) => {
         <div className="headerList">
             <div className="headerListItem active">
                 <FontAwesomeIcon icon={faBed} />
-                <span>Stays</span>
+                <span>
+                  <a href='/hotels/aaaaa'>
+                    Stays
+                  </a>  
+                </span>
             </div>
             <div className="headerListItem">
                 <FontAwesomeIcon icon={faPlane} />

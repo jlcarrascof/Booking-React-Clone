@@ -6,6 +6,12 @@
     position: relative;
 }
 
+/* only for deployment */
+a {
+    color: white;
+    text-decoration: none;
+}
+
 .headerContainer {
     width: 100%;
     max-width: 1024px;
