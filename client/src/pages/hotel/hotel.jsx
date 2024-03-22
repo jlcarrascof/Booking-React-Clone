@@ -5,8 +5,12 @@ import MailList from '../../components/mailList/MailList'
 import Footer from '../../components/footer/Footer'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faLocationDot } from '@fortawesome/free-solid-svg-icons'
+import { useState } from 'react'
 
 const Hotel = () => {
+
+  const [slideNumber, setSlideNumber] = useState(0);
+  const [open, setOpen] = useState(false);
 
   const photos = [
     {
@@ -29,11 +33,19 @@ const Hotel = () => {
     },
   ];
 
+  const handleOpen = (i) => {
+    setSlideNumber(i);
+    setOpen(true);
+  }
+
   return (
     <div>
       <Navbar />
       <Header type="list" />
       <div className="hotelContainer">
+        {open && <div className="slider">
+          sdsdsdsd
+        </div>}
         <div className="hotelWrapper">
           <button className="bookNow">Reserve or Book Now!</button>
           <h1 className="hotelTitle">Grand Hotel</h1>
@@ -48,9 +60,9 @@ const Hotel = () => {
             Book a stay over $114 at this property and get a free airport taxi
           </span>
           <div className="hotelImages">
-            {photos.map(photo => (
+            {photos.map((photo, i) => (
               <div className="hotelImgWrapper">
-                <img src={photo.src} alt="" className="hotelImg" />
+                <img onClick={handleOpen} src={photo.src} alt="" className="hotelImg" />
               </div>
             ))}  
           </div>
